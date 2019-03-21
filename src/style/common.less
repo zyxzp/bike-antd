@@ -1,15 +1,14 @@
-.contanier{
-    font-size: 40px;
-    display: flex;
+@import './default.less';
+.container{
     .nav-left{
-        background-color: #ccc;
-        width: 15%;
-        min-width: 180px;
+        background-color:@colorR;
+        color: @colorM;
         height: calc(100vh);
     }
     .main{
-        flex: 1;
         height: calc(100vh);
+        background-color: @colorL;
+        overflow: auto;
     }
     .content{
         position: relative;
