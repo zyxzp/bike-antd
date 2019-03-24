@@ -18,6 +18,8 @@ import RegisterForm from './pages/form/register';
 import BasicTable from './pages/table/basicTable';
 import City from './pages/city';
 import Order from './pages/order';
+import Common from './common';
+import OrderDetail from './pages/order/detail';
 export default class IRouter extends React.Component {
     render() {
         return (
@@ -25,7 +27,15 @@ export default class IRouter extends React.Component {
                 <App>
                     <Switch>
                         <Route path="/login" component={Login} />
-                        <Route path="/" render={()=>
+                        <Route path="/common" render={() =>
+                            <Common>
+                                <Switch>
+                                    <Route path='/common/order/:id' component={OrderDetail} />
+                                </Switch>
+                            </Common>
+                        }
+                        />
+                        <Route path="/" render={() =>
                             <Admin>
                                 <Switch>
                                     <Route path='/home' component={Home} />
@@ -48,7 +58,7 @@ export default class IRouter extends React.Component {
                         } />
                     </Switch>
                 </App>
-            </HashRouter>
+            </HashRouter >
         );
     }
 }
