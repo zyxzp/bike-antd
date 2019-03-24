@@ -1,4 +1,15 @@
 @import './default.less';
+ul,li{
+    list-style: none;
+}
+.clearfix{
+    &::after{
+        content:' ';
+        clear:both;
+        display: block;
+        visibility: hidden;
+    }
+}
 .container{
     .nav-left{
         background-color:@colorR;

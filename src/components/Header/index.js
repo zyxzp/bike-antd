@@ -41,7 +41,7 @@ export default class Header extends Component {
                 <Row className="header-top">
                     {
                         menuType ?
-                            <Col span="6" className="logo">
+                            <Col span={6} className="logo">
                                 <img src="/assets/logo-ant.svg" alt="" />
                                 <span>IMooc 通用管理系统</span>
                             </Col> : ''

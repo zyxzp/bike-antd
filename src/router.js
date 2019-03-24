@@ -30,7 +30,7 @@ export default class IRouter extends React.Component {
                         <Route path="/common" render={() =>
                             <Common>
                                 <Switch>
-                                    <Route path='/common/order/:id' component={OrderDetail} />
+                                    <Route path='/common/order/detail/:id' component={OrderDetail} />
                                 </Switch>
                             </Common>
                         }
