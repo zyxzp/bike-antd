@@ -17,6 +17,7 @@ import BasicForm from './pages/form/login';
 import RegisterForm from './pages/form/register';
 import BasicTable from './pages/table/basicTable';
 import City from './pages/city';
+import Order from './pages/order';
 export default class IRouter extends React.Component {
     render() {
         return (
@@ -40,6 +41,7 @@ export default class IRouter extends React.Component {
                                     <Route path="/form/reg" component={RegisterForm} />
                                     <Route path="/table/basic" component={BasicTable} />
                                     <Route path="/city" component={City} />
+                                    <Route path="/order" component={Order} />
                                     <Route component={NoMatch} />
                                 </Switch>
                             </Admin>
